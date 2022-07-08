@@ -41,7 +41,7 @@ export class ProductListComponent implements OnInit{
             "releaseDate": "March 19, 2021",
             "description": "Leaf rake with 48-inch wooden handle.",
             "price": 19.95,
-            "starRating": 3.2,
+            "starRating": 3.5,
             "imageUrl": "assets/images/leaf_rake.png"
           },
           {
@@ -72,6 +72,10 @@ export class ProductListComponent implements OnInit{
 
     ngOnInit(): void {
         this.listFilter = 'cart'
+    }
+
+    onRatingClicked(message:string):void {
+        this.pageTitle = 'Product List: ' +message;
     }
 
 
